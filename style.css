@@ -1,0 +1,371 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+   background: white ;
+   font-size: 15px;
+  
+}
+
+.nav-bar{
+   
+    min-height:70px;
+    padding: 0 24px;
+    display: flex;
+    justify-content :space-between;
+    align-items: center;
+    margin-top: 2%;
+    
+}
+
+.nav-bar > a{
+    margin-left: 2em;
+}
+
+.nav-menu{
+    display: flex;
+    height: auto;
+    gap: 50px;
+    margin-right: 35px;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.nav-items{
+    list-style: none; 
+    
+}
+.nav-link{
+    text-decoration: none;
+    color: hsl(233, 8%, 79%) ;
+    transition: 0.7s ease-in-out;
+
+}
+.nav-link:hover , .nav-link::before , .nav-link::after{
+    color: hsl(5, 85%, 63%);
+}
+
+.triple{
+    display: none;
+    cursor: pointer;
+
+  
+}
+
+
+.box{
+        display: block;
+        width: 23px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: rgb(10, 10, 10);
+}
+
+.navitems{
+    display: flex;
+    height: auto;
+    gap: 50px;
+    margin-right: 35px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.main{
+    display: flex;
+}
+
+.image-main > img{
+    width: 87%;
+    margin-left: 65px ;
+}
+
+.sub-main{
+    display: flex;
+    margin-top: 1em;
+}
+
+.sub-main > h1{
+       margin-left: 65px ;
+       margin-right: 4em;
+       font-size: 40px;
+       color:   hsl(240, 100%, 5%);
+
+}
+
+.sub-main > .block > p{
+    color: hsl(236, 13%, 42%) ;
+}
+
+.sub-main > .block button{
+    padding: 13px;
+    width: 10em;
+    cursor: pointer;
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    font-weight: 550;
+    border: none;
+    transition: transform 1250ms ease-in;
+}
+
+.sub-main > .block button:hover ,.sub-main > .block button::before{
+    background-color: hsl(240, 100%, 5%) ;
+    transition: transform 250ms;
+    transform:translate(2px);
+    
+}
+
+.new-main{
+    display: block;
+    background-color:  hsl(240, 100%, 5%) ;
+    color: white;
+    margin-right: 6em;
+    width: 55%;
+}
+
+.new-main > .new-main-head{
+    color:  hsl(35, 77%, 62%);
+    margin: 20px;
+}
+
+.new-main > .sub-new-main > h1{
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+
+
+}
+
+.new-main > .sub-new-main > h1:hover{
+    color:  hsl(35, 77%, 62%);
+    transition: all 0.5s ease-in-out;
+
+}
+
+.new-main > .sub-new-main > p{
+    margin: 20px;
+    color: hsl(147, 8%, 79%);
+
+}
+.new-main > .spn{
+    width: 90%;
+    margin: auto;
+    height: 3vh;
+    border-bottom: 1px solid  hsl(147, 8%, 79%);
+   
+}
+
+
+.main-footer{
+    display: flex;
+    justify-content: center;
+    margin: 70px;
+    margin-top: 2em;        
+    /* padding: 20px; */
+
+}
+.main-box{
+    display: flex;
+}
+
+.boxx{
+    display: block;
+}
+
+.main-box > img{
+    width: 25%;
+    object-fit: cover;
+}
+
+.main-box> .boxx .num{
+    margin: 20px;
+    color: hsl(147, 8%, 79%);
+
+}
+
+.main-box> .boxx .title{
+    margin: 20px;
+    color: hsl(240, 100%, 5%);
+    font-size: 17px;
+    cursor: pointer;
+
+}
+
+.main-box > .boxx .title:hover , .main-box > .boxx .title::before , .main-box > .boxx .title::after{
+    color: hsl(5, 85%, 63%);
+}
+
+
+.main-box> .boxx p{
+
+    margin: 20px;
+    color: hsl(236, 13%, 42%) ; 
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+    .nav-bar > a{
+        margin-left: -10px;
+    }
+
+    .triple{
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 30px;
+
+    }
+
+    .triple.active .box:nth-child(2){
+        opacity: 0;
+    }
+
+    .triple.active .box:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .triple.active .box:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 0px;
+        gap: 1px;
+         height: 100vh;
+        flex-direction: column;
+        background-color:rgb(221, 212, 212);
+        width: 70%;
+        text-align:start;
+        transition: 0.5s;
+    }
+
+    .nav-items{
+        padding: 20px;
+
+        
+    }
+    
+    .nav-link{
+        gap:0;
+        color: hsl(240, 100%, 5%);
+        
+    }
+
+    .nav-menu.active{
+        right: -10%;
+    }
+
+    .navitems{
+        display: block;
+        margin-top: 45%;
+        margin-right:55%;
+        font-size: 20px;
+        
+    }
+
+    
+    .main{
+        display: block;
+        margin: auto;
+    }
+
+    .image-main > img{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+       
+    }
+
+    .sub-main{
+        display: block;
+        margin-top: 1em;
+    }
+
+    .sub-main > h1{
+        margin-left: 21px ;
+        margin-right: 4em;
+        font-size: 40px;
+        color:   hsl(240, 100%, 5%);
+ 
+    }
+
+    .sub-main > .block > p{
+        color: hsl(236, 13%, 42%) ;
+        margin-left: 21px ;
+        margin-top: 1em;
+    }
+
+    .sub-main > .block button{
+        margin-left: 21px ;
+        margin-top: 1em;
+
+    }
+
+    
+    .new-main{
+        margin: auto;
+        margin-top: 2em;
+        width: 90%;
+        /* height: 65vh; */
+        padding-bottom: 1em;
+
+    }
+
+    .new-main > .new-main-head{
+        padding-top: 20px;
+    }
+
+    .main-footer{
+        display: block; 
+        position: relative;
+        right: 40px;
+        
+    }
+
+    .main-box{
+        padding-top: 20px;
+
+    }
+    .main-box > img{
+        width: 45%;
+        height: 200px;
+        position: relative;
+        top: 40px;
+    }
+
+    
+.main-box> .boxx .title{
+    margin: 20px;
+    color: hsl(240, 100%, 5%);
+    font-size: 17px;
+    margin-top: 10px;
+
+}
+
+.main-box> .boxx p{
+
+    margin: 20px;
+    color: hsl(236, 13%, 42%) ; 
+
+}
+.main-box> .boxx .num{
+    margin-top: 35px;
+}
+
+
+
+
+}
